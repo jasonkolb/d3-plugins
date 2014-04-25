@@ -37,10 +37,15 @@ d3.sankey = function() {
   };
 
   sankey.layout = function(iterations) {
+    console.log("computing node links");
     computeNodeLinks();
+    console.log("computing node values");
     computeNodeValues();
+    console.log("computing node breadths");
     computeNodeBreadths();
+    console.log("computing node depths");
     computeNodeDepths(iterations);
+    console.log("computing link depths");
     computeLinkDepths();
     return sankey;
   };
